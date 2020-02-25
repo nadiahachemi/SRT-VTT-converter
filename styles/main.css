@@ -69,8 +69,7 @@ label.label-file{
     background-size: 100%;
     background-image: url(./images/download.svg);
     left: calc(50% - 5vh);
-    margin-top: -8vh;
-
+    margin-top: -4vh;
 }
 
 .input-file:hover::after {
@@ -94,6 +93,7 @@ form{
     width: 25vW;
     justify-content: SPACE-BETWEEN;
     border-radius: 10vh;
+    margin: 6vh;
 }
 
 form.active{
