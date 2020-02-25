@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>SRT TO VTT</title>
+    <link rel="stylesheet" href="./styles/main.css">
+</head>
+<body>
+    <h1>Convert srt to vtt files</h1>
+    <div class="content">
+        <label class="label-file" >Select a srt file to convert</label>
+        <input class="input-file" type="file" multiple>
+        <form action="">
+            <div class="radio srt active" type="radio">SRT</div>
+            <div class="radio vtt" type="radio">VTT</div>
+        </form>
+        <button class="label-file" id="getIt">CONVERT</button>
+    </div>
+ 
+    <div class="loader ">
+    </div>
+</body>
+<script src="./js/lib/FileSaver.js"></script>
+<script src="./js/lib/jquery.min.js"></script>
+<script src="./js/converter.js"></script>
+</html>
