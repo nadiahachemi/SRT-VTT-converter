@@ -1,13 +1,21 @@
-$(".radio").click(function(){
+$("form").click(function(){
+    $("form").toggleClass('active')
     $(".radio").toggleClass('active')
 })
-
+$('input[type=file]').change(function() {
+    var files = $("input")[0].files;
+    for (var i = 0; i < files.length; i++){
+        $(".content .file-list").append("<li>"+files[i].name+  "</li>")
+    }
+});
 
 $("#getIt").click(function(){
     if($("input")[0].files.length>0){
-        $('.loader').addClass('show')
+        $('.loader').addClass('show');
+     
         setTimeout(function ()  {
             if($('.radio.vtt').hasClass('active')){
+               
                 buildVtt($("input")[0].files);
             }else if($('.radio.srt').hasClass('active')){
                 buildSrt($("input")[0].files);
