@@ -12,13 +12,11 @@ $('input[type=file]').change(function() {
 $("#getIt").click(function(){
     if($("input")[0].files.length>0){
         $('.loader').addClass('show');
-     
         setTimeout(function ()  {
             if($('.radio.vtt').hasClass('active')){
-               
-                buildVtt($("input")[0].files);
-            }else if($('.radio.srt').hasClass('active')){
                 buildSrt($("input")[0].files);
+            }else if($('.radio.srt').hasClass('active')){
+                buildVtt($("input")[0].files);
             }
         }, 500);
     }
