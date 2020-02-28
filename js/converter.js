@@ -29,7 +29,6 @@ function buildVtt(files) {
     for (var i = 0; i < files.length; i++) (function (file) {
         // Create reader
         var name = files[i].name.replace('.srt', '.vtt');
-        console.log(files[i].name)
         var reader = new FileReader();
         
         // Event file loaded
